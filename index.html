@@ -237,6 +237,128 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://morana2mo.github.io/morana/2017/04/13/20170413——mwp3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="morana">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="每天进步一点点">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/13/20170413——mwp3/" itemprop="url">
+                  此时心情
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-13T23:04:04+08:00">
+                2017-04-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>刚刚下去遛狗了，想写写自己的心情。<br>此时此刻内心特别缺乏安全感，觉得很空虚，又有点害怕。<br>我害怕面对新的环境，那里没有洋洋。<br>一生又太长，此时每分每秒都难熬，我很渴望洋洋发不完回家，说实话平时我俩话也不多。<br>一生又太短，我还没有好好花时间去爱我身边的每一位。</p>
+<p>人的一生会经历很多事，也会和很多人打交道，当你是个平凡人也没有足够条件的时候不得不去面对这些<br>所以我为何对一些未知的东西感到恐惧。<br>我特别羡慕那些每天充实的人儿<br>恩，一句话，当你放下欲望的时候，你才会活的快乐。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://morana2mo.github.io/morana/2017/04/13/20170413_mwp2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -314,7 +436,7 @@
       
         
           
-            <h3 id="冷门知识点"><a href="#冷门知识点" class="headerlink" title="冷门知识点"></a>冷门知识点</h3><p>给一个对象设置属性并不仅仅是添加一个新属性或者修改已有的属性值。<br>obj.foo= ‘bar’</p>
+            <p>给一个对象设置属性并不仅仅是添加一个新属性或者修改已有的属性值。<br>obj.foo= ‘bar’</p>
 <p>如果obj对象中包含名为foo的普通数据访问属性，上述语句只会修改已有的属性值。<br>如果obj不是直接存在于obj中，[[Prototype]]链就会被遍历，这条连持续找到匹配的属性名，反之foo就会被直接添加到obj上</p>
 <p>如果属性名foo既出现在obj中也出现在obj的[[prototype]]链上层，那么就会被屏蔽，obj<br>中包含的foo属性会屏蔽原型链上层的所有foo属性，因为obj.foo总会选择原型链中最底层的foo属性</p>
 <p>分析：如果foo不存在于obj中而是存在原型链上层时，obj.foo= ‘bar’的原因？</p>
@@ -440,17 +562,19 @@
       
         
           
-            <p>在js中对象中有个特殊的[[Prototype]]内置属性<br>每个对象的[[Prototype]]都会打印出该对象本身的内置方法。(举例如下)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;name:&apos;morana&apos;&#125;</div><div class="line">obj.__proto__  </div><div class="line">//Object &#123;__defineGetter__: function, __defineSetter__: function, hasOwnProperty: function, __lookupGetter__: function, __lookupSetter__: function…&#125;</div><div class="line">function fuc()&#123;console.log(&apos;啦啦啦&apos;)&#125;</div><div class="line">func.__proto__</div><div class="line">//function () &#123; [native code] &#125;</div><div class="line">var arr = [1,2,3];</div><div class="line">arr.__proto__</div><div class="line">//[constructor: function, toString: function, toLocaleString: function, join: function, pop: function…]</div></pre></td></tr></table></figure></p>
-<p>那[[Prototype]]引用有什么用？<br>上述的obj对象中用一个”name”属性，当你使用obj.name会触发[[Get]]操作，而默认是先检查对象本身是否有这个属性，有的话就使用。没有的话，就需要需要对象的[[Prototype]]链了。(举例如下)</p>
+            <p>在js中对象有个特殊的[[Prototype]]内置属性<br>每个对象的[[Prototype]]都会打印出该对象本身的内置方法。(举例如下)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;name:&apos;morana&apos;&#125;</div><div class="line">obj.__proto__  </div><div class="line">//Object &#123;__defineGetter__: function, __defineSetter__: function, hasOwnProperty: function, __lookupGetter__: function, __lookupSetter__: function…&#125;</div><div class="line">function fuc()&#123;console.log(&apos;啦啦啦&apos;)&#125;</div><div class="line">func.__proto__</div><div class="line">//function () &#123; [native code] &#125;</div><div class="line">var arr = [1,2,3];</div><div class="line">arr.__proto__</div><div class="line">//[constructor: function, toString: function, toLocaleString: function, join: function, pop: function…]</div></pre></td></tr></table></figure></p>
+<p>那[[Prototype]]引用有什么用？<br>上述的obj对象中用一个”name”属性，当你使用obj.name会触发[[Get]]操作，而默认是先检查对象本身是否有这个属性，有的话就使用。没有的话，就需要使用对象的[[Prototype]]链了。(举例如下)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var anotherObj = &#123;</div><div class="line">    name:&apos;morana&apos;</div><div class="line">&#125;</div><div class="line">var obj = Object.create(anotherObj)</div><div class="line"></div><div class="line">obj.name</div><div class="line">//morana</div></pre></td></tr></table></figure>
 <p>如果obj在anotherObj中也没有name属性，就会随着[[Prototype]]这条链持续找到匹配的属性名，反之，[[Get]]操作会返回undefined</p>
 <p>而for…in遍历对象的原型和查找[[Prototype]]链类似</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var anotherObj = &#123;</div><div class="line">    name:&apos;morana&apos;</div><div class="line">&#125;</div><div class="line">var obj = Object.create(anotherObj)</div><div class="line">for(var i in obj)&#123;</div><div class="line">    console.log(&apos;found：&apos; + i);</div><div class="line">&#125;</div><div class="line">//found:name</div><div class="line"></div><div class="line">(&apos;name&apos; in obj) // true</div></pre></td></tr></table></figure>
 <p>而所有普通的对象通过[[Prototype]]链都会指向内置的Object.prototype<br>由于所用的”普通”（内置非特定主机的扩展）对象的最顶层为Object.prototype,所以它包含js中许多通过的功能。</p>
 <p>js是少有的可以不通过类，直接创建对象的语言。</p>
-<p>所用的函数拥有一个名为prototy的共有并且不可枚举的属性，它会指向另一个对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function Fuc()&#123;</div><div class="line">    //...</div><div class="line">&#125;</div><div class="line">Foo.prototype;//&#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>所用的函数拥有一个名为prototype的共有且不可枚举的属性，它指向的是另一个对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function Fuc()&#123;</div><div class="line">    //...</div><div class="line">&#125;</div><div class="line">Fuc.prototype;//&#123;&#125;</div></pre></td></tr></table></figure></p>
 <p>这个对象通常称为Fuc的原型，因为可以通过Fuc.prototype的属性引用来访问它。<br>最直接的解释就是：这个对象是在调用new Fuc()是创建，最后会被关联到Fuc.prototype对象上</p>
 <p>分析：new Fuc()会生成一个新对象，而这个新对象的内部链接[[Prototype]]</p>
+<p>另外Fuc.prototype有一个共有并且不可枚举的属性.constructor,这个属性引用的是对象关联的函数（本例为Fuc）。<br>构造函数调用new Func()创建的对象也有一个.constructor属性，指向”创建这个对象的函数”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">js模仿类的行为</div><div class="line">function Foo(name)&#123;</div><div class="line">    this.name = name</div><div class="line">&#125;</div><div class="line">Foo.prototype.myName = function()&#123;</div><div class="line">    return this.name;</div><div class="line">&#125;</div><div class="line">var a = new Foo(&apos;a&apos;);</div><div class="line">var b = new Foo(&apos;b&apos;);</div><div class="line"></div><div class="line">a.myName();//&apos;a&apos;</div><div class="line">b.myName();//&apos;b&apos;</div></pre></td></tr></table></figure></p>
+<p>解释：为什么a.myName()可以正常工作的原理？<br>a,b在创建的过程中，其内部[[prototype]]都会关联到Foo.prototype上。<br>当a,b无法找到myName上，她会在Foo.prototype上找</p>
 
           
         
@@ -780,7 +904,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

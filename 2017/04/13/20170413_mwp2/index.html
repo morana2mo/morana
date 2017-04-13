@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="冷门知识点给一个对象设置属性并不仅仅是添加一个新属性或者修改已有的属性值。obj.foo= ‘bar’ 如果obj对象中包含名为foo的普通数据访问属性，上述语句只会修改已有的属性值。如果obj不是直接存在于obj中，[[Prototype]]链就会被遍历，这条连持续找到匹配的属性名，反之foo就会被直接添加到obj上 如果属性名foo既出现在obj中也出现在obj的[[prototype]]链上">
+<meta name="description" content="给一个对象设置属性并不仅仅是添加一个新属性或者修改已有的属性值。obj.foo= ‘bar’ 如果obj对象中包含名为foo的普通数据访问属性，上述语句只会修改已有的属性值。如果obj不是直接存在于obj中，[[Prototype]]链就会被遍历，这条连持续找到匹配的属性名，反之foo就会被直接添加到obj上 如果属性名foo既出现在obj中也出现在obj的[[prototype]]链上层，那么就">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="属性设置和屏蔽">
 <meta property="og:url" content="https://morana2mo.github.io/morana/2017/04/13/20170413_mwp2/index.html">
 <meta property="og:site_name" content="每天进步一点点">
-<meta property="og:description" content="冷门知识点给一个对象设置属性并不仅仅是添加一个新属性或者修改已有的属性值。obj.foo= ‘bar’ 如果obj对象中包含名为foo的普通数据访问属性，上述语句只会修改已有的属性值。如果obj不是直接存在于obj中，[[Prototype]]链就会被遍历，这条连持续找到匹配的属性名，反之foo就会被直接添加到obj上 如果属性名foo既出现在obj中也出现在obj的[[prototype]]链上">
-<meta property="og:updated_time" content="2017-04-13T14:01:21.000Z">
+<meta property="og:description" content="给一个对象设置属性并不仅仅是添加一个新属性或者修改已有的属性值。obj.foo= ‘bar’ 如果obj对象中包含名为foo的普通数据访问属性，上述语句只会修改已有的属性值。如果obj不是直接存在于obj中，[[Prototype]]链就会被遍历，这条连持续找到匹配的属性名，反之foo就会被直接添加到obj上 如果属性名foo既出现在obj中也出现在obj的[[prototype]]链上层，那么就">
+<meta property="og:updated_time" content="2017-04-13T14:02:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="属性设置和屏蔽">
-<meta name="twitter:description" content="冷门知识点给一个对象设置属性并不仅仅是添加一个新属性或者修改已有的属性值。obj.foo= ‘bar’ 如果obj对象中包含名为foo的普通数据访问属性，上述语句只会修改已有的属性值。如果obj不是直接存在于obj中，[[Prototype]]链就会被遍历，这条连持续找到匹配的属性名，反之foo就会被直接添加到obj上 如果属性名foo既出现在obj中也出现在obj的[[prototype]]链上">
+<meta name="twitter:description" content="给一个对象设置属性并不仅仅是添加一个新属性或者修改已有的属性值。obj.foo= ‘bar’ 如果obj对象中包含名为foo的普通数据访问属性，上述语句只会修改已有的属性值。如果obj不是直接存在于obj中，[[Prototype]]链就会被遍历，这条连持续找到匹配的属性名，反之foo就会被直接添加到obj上 如果属性名foo既出现在obj中也出现在obj的[[prototype]]链上层，那么就">
 
 
 
@@ -312,7 +312,7 @@
       
 
       
-        <h3 id="冷门知识点"><a href="#冷门知识点" class="headerlink" title="冷门知识点"></a>冷门知识点</h3><p>给一个对象设置属性并不仅仅是添加一个新属性或者修改已有的属性值。<br>obj.foo= ‘bar’</p>
+        <p>给一个对象设置属性并不仅仅是添加一个新属性或者修改已有的属性值。<br>obj.foo= ‘bar’</p>
 <p>如果obj对象中包含名为foo的普通数据访问属性，上述语句只会修改已有的属性值。<br>如果obj不是直接存在于obj中，[[Prototype]]链就会被遍历，这条连持续找到匹配的属性名，反之foo就会被直接添加到obj上</p>
 <p>如果属性名foo既出现在obj中也出现在obj的[[prototype]]链上层，那么就会被屏蔽，obj<br>中包含的foo属性会屏蔽原型链上层的所有foo属性，因为obj.foo总会选择原型链中最底层的foo属性</p>
 <p>分析：如果foo不存在于obj中而是存在原型链上层时，obj.foo= ‘bar’的原因？</p>
@@ -353,6 +353,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/13/20170413——mwp3/" rel="next" title="此时心情">
+                <i class="fa fa-chevron-left"></i> 此时心情
+              </a>
             
           </div>
 
@@ -409,17 +413,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -434,7 +429,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -463,22 +458,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#冷门知识点"><span class="nav-number">1.</span> <span class="nav-text">冷门知识点</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
