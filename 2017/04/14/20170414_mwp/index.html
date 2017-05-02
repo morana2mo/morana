@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="call,apply是函数（Function）的内置方法。该方法是在指定this值和参数的情况下调用某个函数">
+<meta name="description" content="js处于安全方面的考虑，不允许跨域调用其他页面的对象。什么的跨域？简单的理解是因为js同源策略的限制。什么是同源策略？同源策略限制从一个源加载的文档或脚本如何与另一个源的资源进行交互怎么去定义一个源？如果协议（http,https）    端口（指定了一个）    主机（域名）对于两个页面是相同，则两个页面具有相同的源。是否允许通信？http://www.a.com/a.jshttp://www.">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对call,applay的一些总结">
-<meta property="og:url" content="https://morana2mo.github.io/morana/2017/04/12/20170412_mwp/index.html">
+<meta property="og:title" content="谈谈跨域">
+<meta property="og:url" content="https://morana2mo.github.io/morana/2017/04/14/20170414_mwp/index.html">
 <meta property="og:site_name" content="每天进步一点点">
-<meta property="og:description" content="call,apply是函数（Function）的内置方法。该方法是在指定this值和参数的情况下调用某个函数">
-<meta property="og:updated_time" content="2017-04-12T15:05:51.000Z">
+<meta property="og:description" content="js处于安全方面的考虑，不允许跨域调用其他页面的对象。什么的跨域？简单的理解是因为js同源策略的限制。什么是同源策略？同源策略限制从一个源加载的文档或脚本如何与另一个源的资源进行交互怎么去定义一个源？如果协议（http,https）    端口（指定了一个）    主机（域名）对于两个页面是相同，则两个页面具有相同的源。是否允许通信？http://www.a.com/a.jshttp://www.">
+<meta property="og:updated_time" content="2017-04-14T16:11:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对call,applay的一些总结">
-<meta name="twitter:description" content="call,apply是函数（Function）的内置方法。该方法是在指定this值和参数的情况下调用某个函数">
+<meta name="twitter:title" content="谈谈跨域">
+<meta name="twitter:description" content="js处于安全方面的考虑，不允许跨域调用其他页面的对象。什么的跨域？简单的理解是因为js同源策略的限制。什么是同源策略？同源策略限制从一个源加载的文档或脚本如何与另一个源的资源进行交互怎么去定义一个源？如果协议（http,https）    端口（指定了一个）    主机（域名）对于两个页面是相同，则两个页面具有相同的源。是否允许通信？http://www.a.com/a.jshttp://www.">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://morana2mo.github.io/morana/2017/04/12/20170412_mwp/"/>
+  <link rel="canonical" href="https://morana2mo.github.io/morana/2017/04/14/20170414_mwp/"/>
 
 
 
 
 
-  <title> 对call,applay的一些总结 | 每天进步一点点 </title>
+  <title> 谈谈跨域 | 每天进步一点点 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -240,7 +240,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://morana2mo.github.io/morana/2017/04/12/20170412_mwp/">
+    <link itemprop="mainEntityOfPage" href="https://morana2mo.github.io/morana/2017/04/14/20170414_mwp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="morana">
@@ -261,7 +261,7 @@
             
             
               
-                对call,applay的一些总结
+                谈谈跨域
               
             
           </h1>
@@ -276,8 +276,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-12T23:05:51+08:00">
-                2017-04-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-14T22:26:14+08:00">
+                2017-04-14
               </time>
             
 
@@ -312,7 +312,7 @@
       
 
       
-        <p>call,apply是函数（Function）的内置方法。<br>该方法是在指定this值和参数的情况下调用某个函数</p>
+        <p>js处于安全方面的考虑，不允许跨域调用其他页面的对象。<br>什么的跨域？<br>简单的理解是因为js同源策略的限制。<br>什么是同源策略？<br>同源策略限制从一个源加载的文档或脚本如何与另一个源的资源进行交互<br>怎么去定义一个源？<br>如果协议（http,https）<br>    端口（指定了一个）<br>    主机（域名）<br>对于两个页面是相同，则两个页面具有相同的源。<br>是否允许通信？<br><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a><br><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a>            同一域名下   允许<br><a href="http://www.a.com/lab/a.js" target="_blank" rel="external">http://www.a.com/lab/a.js</a><br><a href="http://www.a.com/script/b.js" target="_blank" rel="external">http://www.a.com/script/b.js</a>      同一域名下不同文件夹  允许<br><a href="http://www.a.com:8000/a.js" target="_blank" rel="external">http://www.a.com:8000/a.js</a><br><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a>   同一域名，不同端口   不允许<br><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a><br><a href="https://www.a.com/b.js" target="_blank" rel="external">https://www.a.com/b.js</a>  同一域名，不同协议   不允许<br><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a><br><a href="http://70.32.92.74/b.js" target="_blank" rel="external">http://70.32.92.74/b.js</a> 域名和域名对应ip   不允许<br><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a><br><a href="http://script.a.com/b.js" target="_blank" rel="external">http://script.a.com/b.js</a>    主域相同，子域不同   不允许<br><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a><br><a href="http://a.com/b.js" target="_blank" rel="external">http://a.com/b.js</a>   同一域名，不同二级域名（同上） 不允许（cookie这种情况下也不允许访问）<br><a href="http://www.cnblogs.com/a.js" target="_blank" rel="external">http://www.cnblogs.com/a.js</a><br><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a>   不同域名    不允许<br>特别注意两点：</p>
 
       
     </div>
@@ -349,8 +349,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/13/20170413_mwp/" rel="next" title="原型">
-                <i class="fa fa-chevron-left"></i> 原型
+              <a href="/2017/04/15/20170415_mwp/" rel="next" title="整理常用linus语法">
+                <i class="fa fa-chevron-left"></i> 整理常用linus语法
               </a>
             
           </div>
@@ -359,8 +359,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/12/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/13/20170413_mwp2/" rel="prev" title="属性设置和屏蔽">
+                属性设置和屏蔽 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

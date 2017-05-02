@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="call,apply是函数（Function）的内置方法。该方法是在指定this值和参数的情况下调用某个函数">
+<meta name="description" content="1，对于webpack配置文件中常常会看到path:path.join(dirname,’path’)或者path:path.resolve(dirname,’path’)那么上述写法有什么区别呢？综所周知path模块是node.js提供的用户处理文件路径的小工具123456789101112131415语法：path.join([path1][,path2][,...])用于连接路径，该方法主要">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对call,applay的一些总结">
-<meta property="og:url" content="https://morana2mo.github.io/morana/2017/04/12/20170412_mwp/index.html">
+<meta property="og:title" content="日常总结">
+<meta property="og:url" content="https://morana2mo.github.io/morana/2017/04/27/20170427_mwp/index.html">
 <meta property="og:site_name" content="每天进步一点点">
-<meta property="og:description" content="call,apply是函数（Function）的内置方法。该方法是在指定this值和参数的情况下调用某个函数">
-<meta property="og:updated_time" content="2017-04-12T15:05:51.000Z">
+<meta property="og:description" content="1，对于webpack配置文件中常常会看到path:path.join(dirname,’path’)或者path:path.resolve(dirname,’path’)那么上述写法有什么区别呢？综所周知path模块是node.js提供的用户处理文件路径的小工具123456789101112131415语法：path.join([path1][,path2][,...])用于连接路径，该方法主要">
+<meta property="og:updated_time" content="2017-05-02T06:51:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对call,applay的一些总结">
-<meta name="twitter:description" content="call,apply是函数（Function）的内置方法。该方法是在指定this值和参数的情况下调用某个函数">
+<meta name="twitter:title" content="日常总结">
+<meta name="twitter:description" content="1，对于webpack配置文件中常常会看到path:path.join(dirname,’path’)或者path:path.resolve(dirname,’path’)那么上述写法有什么区别呢？综所周知path模块是node.js提供的用户处理文件路径的小工具123456789101112131415语法：path.join([path1][,path2][,...])用于连接路径，该方法主要">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://morana2mo.github.io/morana/2017/04/12/20170412_mwp/"/>
+  <link rel="canonical" href="https://morana2mo.github.io/morana/2017/04/27/20170427_mwp/"/>
 
 
 
 
 
-  <title> 对call,applay的一些总结 | 每天进步一点点 </title>
+  <title> 日常总结 | 每天进步一点点 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -240,7 +240,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://morana2mo.github.io/morana/2017/04/12/20170412_mwp/">
+    <link itemprop="mainEntityOfPage" href="https://morana2mo.github.io/morana/2017/04/27/20170427_mwp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="morana">
@@ -261,7 +261,7 @@
             
             
               
-                对call,applay的一些总结
+                日常总结
               
             
           </h1>
@@ -276,8 +276,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-12T23:05:51+08:00">
-                2017-04-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-27T16:39:01+08:00">
+                2017-04-27
               </time>
             
 
@@ -312,7 +312,11 @@
       
 
       
-        <p>call,apply是函数（Function）的内置方法。<br>该方法是在指定this值和参数的情况下调用某个函数</p>
+        <p>1，对于webpack配置文件中常常会看到path:path.join(<strong>dirname,’path’)或者path:path.resolve(</strong>dirname,’path’)<br>那么上述写法有什么区别呢？<br>综所周知path模块是node.js提供的用户处理文件路径的小工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">语法：path.join([path1][,path2][,...])</div><div class="line">用于连接路径，该方法主要用途在于，会正确使用当前系统的路径分隔符，Unix &apos;/&apos; windows &apos;\&apos;  </div><div class="line">     path.resolve([from...],to)</div><div class="line">将to参数解析为绝对路径</div><div class="line">例子：</div><div class="line"> var path = require(&apos;path&apos;);</div><div class="line">    console.log(path.join(&apos;/test&apos;,&apos;test1&apos;,&apos;test2&apos;));</div><div class="line">    console.log(__dirname);</div><div class="line">    console.log(path.resolve(&apos;main.js&apos;));</div><div class="line">    console.log(path.resolve(__dirname,&apos;/src&apos;)));</div><div class="line"></div><div class="line">    /test/test1/test2</div><div class="line">    /Users/morana</div><div class="line">    /Users/morana/main.js</div><div class="line">    /src</div></pre></td></tr></table></figure></p>
+<p>2，关于webpack中context<br>起初在配置项中看到有context，索性google下，结果在webpack1.0文档中看到dynamic requires中用个context方法，但是这并不是我想要的结果。皇天不负有心人，在2.0的文档中 Entry and Context<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">基础目录，一个绝对路径，为了解决配置中的入口和装载程序。</div><div class="line">语法：context:path.resolve(__dirname,&apos;app&apos;)</div></pre></td></tr></table></figure></p>
+<p>3,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;a  href=&quot;tel://186********&quot;&gt;&lt;/a&gt;</div><div class="line">上述方法可以调用设备电话功能</div></pre></td></tr></table></figure></p>
+<p>4，WebSocket</p>
+<p>5，Promise<br>在之前的阅读了很多有关Promise的文章，但是追根揭底还是从阮一峰大神那边借鉴过来的，今天我就来谈谈我对Promised的理解。<br>之前jquery也有对Promise进行过封装，不过ES6终于引入了Promise这一特性，废话不多说，<br>谈到Promise，我们先在控制台上打印一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"> </div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -349,18 +353,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/13/20170413_mwp/" rel="next" title="原型">
-                <i class="fa fa-chevron-left"></i> 原型
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/12/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/25/20170425_mwp/" rel="prev" title="es6总结之Generator函数">
+                es6总结之Generator函数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
